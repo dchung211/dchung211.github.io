@@ -33,6 +33,10 @@ header ul{
 	flex-wrap: wrap;
 	list-style: none;
 	justify-content: center;
+
+	@media (max-width:1316px) {
+		min-height: 30px;
+	}
 }
 
 #header img{
@@ -78,6 +82,10 @@ header h1{
 	color: #F0F0F0;
 	border-right: #A26769 1.5px solid;
 	box-shadow: #F0F0F0 1px 0px 0px;
+
+	@media (max-width:1316px) {
+		font-size: 150%;
+	}
 }
 
 #navigation li:last-child a{
@@ -86,7 +94,7 @@ header h1{
 }
 
 /*								Container								*/
-div#container {
+#container {
 	list-style: none;
 	width: 90%;
 	background-color: #D5B9B2;

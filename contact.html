@@ -37,52 +37,27 @@
                 <li>
                     <label for="name">Your Name</label>
                     <input id="name" name="name" type="text" />
-                    <p class="shippingError error" id="name_error">* Required field</p>
+                    <p class="contact error" id="name_error">* What would you like to be known as? I need to know who I'm talking to!</p>
+                </li>
+                <li>
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" />
+                    <p class="contact error" id="phone_error">* These spam messages needs a receiver!</p>
                 </li>
                 <li>
                     <label for="email">Email</label>
                     <input id="email" name="email" type="text" />
-                    <p class="shippingError error" id="email_error">* Required field</p>
-                    <p class="shippingError error" id="emailformat_error">
-                        * Invalid email address
-                    </p>
+                    <p class="contact error" id="email_error">* These spam mails needs a home too!</p>
+                    <p class="contact error" id="emailformat_error">* Give me your REAL email (or at least a more believably valid one) (○´･д･)ﾉ</p>
                 </li>
                 <li>
-                    <label for="address">Address</label>
-                    <input id="address" name="address" type="text" />
-                    <p class="shippingError error" id="address_error">* Required field</p>
-                </li>
-                <li>
-                    <label for="city">City</label>
-                    <input id="city" name="city" type="text" />
-                    <p class="shippingError error" id="city_error">* Required field</p>
-                </li>
-                <li>
-                    <label for="province">Province</label>
-                    <select id="province" name="province">
-                        <option value="AB">Alberta</option>
-                        <option value="BC">British Columbia</option>
-                        <option value="MB">Manitoba</option>
-                        <option value="NB">New Brunswick</option>
-                        <option value="NL">Newfoundland and Labrador</option>
-                        <option value="NS">Nova Scotia</option>
-                        <option value="ON">Ontario</option>
-                        <option value="PE">Prince Edward Island</option>
-                        <option value="QC">Quebec</option>
-                        <option value="SK">Saskatchewan</option>
-                        <option value="NT">Northwest Territories</option>
-                        <option value="NU">Nunavut</option>
-                        <option value="YT">Yukon</option>
-                    </select>
-                    <p class="shippingError error" id="province_error">* Required field</p>
-                </li>
-                <li>
-                    <label for="postal">Postal Code</label>
-                    <input id="postal" name="postal" type="text" />
-                    <p class="shippingError error" id="postal_error">* Required field</p>
-                    <p class="shippingError error" id="postalformat_error">* Invalid postal code</p>
+                    <label for="comments">What do you have to say?</label>
+                    <textarea id="comments" name="comments"></textarea>
+                    <p class="contact error" id="comments_error">* "Brevity is the soul of wit, but we need your comment to have text in it." - Archive Of Our Own</p>
                 </li>
             </ul>
+            <button type="submit" id="submit">Submit</button>
+			<button type="reset" id="clear">Reset</button>
             </div>
         </div>
     </body>

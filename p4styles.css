@@ -7,7 +7,6 @@
 
 *********************/
 html{
-	overflow-x: hidden;
 }
 
 #navigation li a:hover{
@@ -38,7 +37,9 @@ header ul{
 }
 
 #header img{
-	width: 1519px;
+	position: absolute;
+	width: 100%;
+	min-height: 60px;
 }
 
 header a{

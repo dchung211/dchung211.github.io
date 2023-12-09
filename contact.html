@@ -1,0 +1,89 @@
+<!--------------------
+
+    Project 4
+    Name: Doanh Chung
+    Date: December 7, 2023
+    Description: The contact page for Project 4 of Web Development.
+
+--------------------->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Project 4 | Contact Me</title>
+		<link rel="stylesheet" href="p4styles.css">
+		<script src="js/formValidate.js"></script>
+	</head>
+    <body>
+        <header>			
+            <div id="header">
+                <img src="images/bannerImage.png" alt="Image of the banner for Project 4's website.">
+                
+                <h1>A SLICE OF JUNE</h1>
+            </div>
+
+            <ul id="navigation">
+                <li><a href=index.html>HOME</a></li>
+                <li><a href=#>ABOUT ME</a></li>
+                <li><a href=#>PRODUCTS (My Cursed Creations)</a></li>
+                <li><a href=#>MORE ART</a></li>
+                <li><a href=contact.html>CONTACT ME</a></li>
+            </ul>
+        </header>
+        <div id="container" role="main">
+            <div id="content">
+                <h1>Want To Thow Your Thoughts At Me?</h1>
+            <ul>
+                <li>
+                    <label for="name">Your Name</label>
+                    <input id="name" name="name" type="text" />
+                    <p class="shippingError error" id="name_error">* Required field</p>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text" />
+                    <p class="shippingError error" id="email_error">* Required field</p>
+                    <p class="shippingError error" id="emailformat_error">
+                        * Invalid email address
+                    </p>
+                </li>
+                <li>
+                    <label for="address">Address</label>
+                    <input id="address" name="address" type="text" />
+                    <p class="shippingError error" id="address_error">* Required field</p>
+                </li>
+                <li>
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text" />
+                    <p class="shippingError error" id="city_error">* Required field</p>
+                </li>
+                <li>
+                    <label for="province">Province</label>
+                    <select id="province" name="province">
+                        <option value="AB">Alberta</option>
+                        <option value="BC">British Columbia</option>
+                        <option value="MB">Manitoba</option>
+                        <option value="NB">New Brunswick</option>
+                        <option value="NL">Newfoundland and Labrador</option>
+                        <option value="NS">Nova Scotia</option>
+                        <option value="ON">Ontario</option>
+                        <option value="PE">Prince Edward Island</option>
+                        <option value="QC">Quebec</option>
+                        <option value="SK">Saskatchewan</option>
+                        <option value="NT">Northwest Territories</option>
+                        <option value="NU">Nunavut</option>
+                        <option value="YT">Yukon</option>
+                    </select>
+                    <p class="shippingError error" id="province_error">* Required field</p>
+                </li>
+                <li>
+                    <label for="postal">Postal Code</label>
+                    <input id="postal" name="postal" type="text" />
+                    <p class="shippingError error" id="postal_error">* Required field</p>
+                    <p class="shippingError error" id="postalformat_error">* Invalid postal code</p>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </body>
+</html>

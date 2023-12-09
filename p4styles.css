@@ -1,0 +1,225 @@
+/*********************
+    
+    Project 4 Stylesheet
+    Name: Doanh Chung
+    Date: December 7, 2023
+    Description: The style sheet for index.html
+
+*********************/
+
+#navigation li a:hover{
+	color: #ff9a9a;
+}
+
+a:focus, #tabs li a:focus{
+	color: #ff3838;
+}
+
+body{
+    background-color: #F9F6F1;
+	margin: 0%;
+}
+
+h1{
+	color: #582C4D;
+	padding-left: 5px;
+}
+
+/*								HEADER								*/
+
+header ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+}
+
+#header img{
+	width: 1519px;
+}
+
+header a{
+	padding: 0px 10px 0px 10px;
+	text-decoration: none;
+}
+
+#header{
+	position: absolute;
+}
+
+header h1{
+	position: absolute;
+	top: -5px;
+	left: 25px;
+	letter-spacing: 8px;
+	font-size: 32px;
+	color: #fff;
+}
+
+#navigation{
+	background-color: #582C4D;
+	position: relative;
+	left: 0px;;
+	top: 60px;
+	height: 20px;
+    width: auto;
+	padding: 1px 0px 2px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+#navigation li a{
+	font-size: 15px;
+	position: relative;
+	top: 1px;
+	color: #F0F0F0;
+	border-right: #A26769 1.5px solid;
+	box-shadow: #F0F0F0 1px 0px 0px;
+}
+
+#navigation li:last-child a{
+    border: none;
+	box-shadow: none;
+}
+
+/*								Container								*/
+div#container {
+	list-style: none;
+	width: 1200px;
+	background-color: #D5B9B2;
+    margin: auto;
+	position: relative;
+	top: 80px;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 8px;
+	padding: 10px;
+
+	@media (max-width:1000px) {
+		max-width: 90%;
+		justify-content: center;
+		display: block;
+	}
+}
+
+#container p{
+	max-width: 550px;
+	margin-left: 20px;
+	align-self: start;
+	display: flex;
+}
+
+#container img{
+	max-width: 600px;
+	display: flex;
+	position: relative;
+	right: 0%;
+
+	@media (max-width:675px) {
+		max-width: 90%;
+	}
+}
+
+#intro h1{
+	text-decoration: underline overline;
+}
+
+
+/*								Recent Activities								*/
+#content{
+	width: 100%;
+}
+
+#content h1{
+	margin-top: 0%;
+	text-decoration: underline overline;
+}
+
+.activity{
+	max-width: 1000px;
+	background-color: #EDE4D4;
+	border-radius: 10px;
+	padding: 10px;
+	position: relative;
+	margin: auto auto 10px auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.activity h2{
+	margin: 5px 0px 1px 5px;
+	width: 100%;
+}
+
+.activity p{
+	width: 100%;
+}
+
+.activityImages{
+	width: 400px;
+	height: 190px;
+	position: relative;
+	top: -30px;
+	@media (max-width:1000px) {
+		top: 0%;
+		height: 120px;
+	}
+}
+
+.activityImages img{
+	position: relative;
+	width: 70%;
+	@media (max-width:1000px) {
+		width: 40%;
+	}
+}
+
+.activityImages img:last-child{
+	top: -40px;
+	left: 30%;
+}
+
+.activityDate{
+	width: 100%;
+	margin: 5px 0% 0% 0%;
+	font-size: 13px;
+}
+
+
+@media (max-width:780px) {
+	#navigation li{
+		text-align: center;
+		background-color: #582C4D;
+	}
+
+	#navigation li:nth-child(4) a{
+		border: none;
+		box-shadow: none;
+	}
+
+	#navigation li:first-child{
+		text-align: left;
+		width: auto;
+	}
+
+	#navigation li:last-child{
+		border-top: #fff 1px solid;
+		width: 100%;
+	}
+} 
+
+@media (max-width:519px) {
+	#navigation li:last-child, #navigation li:nth-child(4){
+		border-top: #fff 1px solid;
+		width: 100%;
+	}
+	
+	#navigation li:nth-child(3) a{
+		border: none;
+		box-shadow: none;
+	}
+
+	div#container{
+		position: relative;
+		top: 100px;
+	}
+}

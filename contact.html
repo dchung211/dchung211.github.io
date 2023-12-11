@@ -1,0 +1,77 @@
+<!--------------------
+
+    Project 4
+    Name: Doanh Chung
+    Date: December 7, 2023
+    Description: The contact page for Project 4 of Web Development.
+
+--------------------->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Project 4 | Contact Me</title>
+		<link rel="stylesheet" href="p4styles.css">
+		<script src="js/formValidate.js"></script>
+	</head>
+    <body>
+        <header>			
+            <div id="header">
+                <img src="images/bannerImage.png" alt="Image of the banner for Project 4's website.">
+                
+                <h1>A SLICE OF JUNE</h1>
+            </div>
+
+            <ul id="navigation">
+                <li><a href=index.html>HOME</a></li>
+                <li><a href=#>ABOUT ME</a></li>
+                <li><a href=#>PRODUCTS (My Cursed Creations)</a></li>
+                <li><a href=#>MORE ART</a></li>
+                <li><a href=contact.html>CONTACT ME</a></li>
+            </ul>
+        </header>
+
+        <div id="container" role="main">
+            <form id="contactForm" action="index.html" method="post">
+                <fieldset id="contact">
+                    <h1>Want To Thow Your Thoughts At Me?</h1>
+                    <div id="content">
+                        <ul>
+                            <li>
+                                <label for="name">Your Name</label>
+                                <input id="name" name="name" type="text" />
+                                <p class="error" id="name_error">* What would you like to be known as? I need to know who I'm talking to!</p>
+                            </li>
+                            <li>
+                                <label for="phone">Phone Number</label>
+                                <input id="phone" name="phone" type="tel" />
+                                <p class="error" id="phone_error">* These spam messages needs a receiver!</p>
+                                <p class="error" id="phoneFormat_error">* You wouldn't give me a fake phone number, would you? 🥺</p>
+                            </li>
+                            <li>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="text" />
+                                <p class="error" id="email_error">* These spam mails needs a home too!</p>
+                                <p class="error" id="emailformat_error">* Give me your REAL email (or at least a more believably valid one)</p>
+                            </li>
+                            <li>
+                                <label for="comments">What do you have to say?</label>
+                                <textarea id="comments" name="comments"></textarea>
+                                <p class="error" id="comments_error">* "Brevity is the soul of wit, but we need your comment to have text in it." - Archive Of Our Own</p>
+                            </li>
+                            <li>
+                                <label for="agree">I have read and agree to the Terms And Condition</label>
+                                <input title="I hereby agree to sell my soul" id="agree" name="agree" type="checkbox" />
+                                <p class="error" id="agree_error">* Please check this box if you want to proceed.</p>
+                                <p id="thankYouMessage">⁂ Hippity Hoppity, your soul is now my property. Hahah! You should have hovered your mouse over the checkbox for longer.</p>
+                            </li>
+                        </ul>
+                        <button type="submit" id="submit">Submit</button>
+                        <button type="reset" id="clear">Reset</button>
+                    </div>
+                </fieldset>
+            </form>
+            
+        </div>
+    </body>
+</html>

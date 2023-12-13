@@ -325,5 +325,10 @@ footer p{
 	
 	#contact{
 		width: 80vw;
+		font-size: larger;
+	}
+
+	#contactContent{
+		font-size: 4vw;
 	}
 }

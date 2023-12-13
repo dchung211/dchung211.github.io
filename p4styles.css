@@ -369,3 +369,10 @@ fieldset{
 		font-size: 3vw;
 	}
 } 
+
+@media (max-device-width:400px) {
+	#contactContent ul{
+		padding-left: 0%;
+		list-style: none;
+	}
+}

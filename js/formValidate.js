@@ -55,7 +55,6 @@ function validate(e) {
 	if (formHasErrors()) {
 		e.preventDefault();
 		return false;
-		
 	}
 	return true;
 }
@@ -81,7 +80,7 @@ function formHasErrors() {
 	if (agree.checked == false) {
 		document.getElementById("agree_error").style.display = "block";
 		thereIsAnError = true;
-		dealWithTheError(4);
+		dealWithTheError(4, false);
 	}
 	else {
 		document.getElementById("thankYouMessage").style.display = "block";
@@ -90,40 +89,39 @@ function formHasErrors() {
 	if (comments === "") {
 		document.getElementById("comments_error").style.display = "block";
 		thereIsAnError = true;
-		dealWithTheError(3);
+		dealWithTheError(3, false);
 	}
 
 	if (email === "") {
 		document.getElementById("email_error").style.display = "block";
 		thereIsAnError = true;
-		dealWithTheError(2);
+		dealWithTheError(2, false);
 	}
 	else if (!emailRegEx.test(email)) {
 		document.getElementById("emailformat_error").style.display = "block";
 		thereIsAnError = true;
-		dealWithTheError(2, 1);
+		dealWithTheError(2, true);
 	}
 
 	if (phone === "") {
 		document.getElementById("phone_error").style.display = "block";
 		thereIsAnError = true;
-		dealWithTheError(1);
+		dealWithTheError(1, false);
 	}
 	else if (!phoneRegEx.test(phone)) {
 		document.getElementById("phoneFormat_error").style.display = "block";
 		thereIsAnError = true;
-		dealWithTheError(1, 1);
+		dealWithTheError(1, true);
 	}
 	
 	if (name === "") {
 		document.getElementById("name_error").style.display = "block";
 		thereIsAnError = true;
-		dealWithTheError(0);
+		dealWithTheError(0, false);
 	}
 
 	return thereIsAnError;
 }
-
 
 /*
  * Handles the reset event for the form.
@@ -154,11 +152,17 @@ function trim(str)
 	return str.replace(/^\s+|\s+$/g,"");
 }
 
-function dealWithTheError(number, type)
+/*
+ * Set focus on the input field and highlights existing text if present.
+ *
+ * param number The index of the array which returns the name of the needed input. 
+ * param thereIsTextInInput The boolean value for if there is text inputted.
+ */
+function dealWithTheError(number, thereIsTextInInput)
 {
 	document.getElementById(inputs[number]).focus();
 
-	if (type == 1) {
+	if (thereIsTextInInput) {
 		document.getElementById(inputs[number]).select();
 	}
 }

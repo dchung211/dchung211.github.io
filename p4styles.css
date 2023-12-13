@@ -27,6 +27,11 @@ h1{
 	text-decoration: underline overline;
 }
 
+input:focus, textarea:focus{
+	background-color: #EDE4D4;
+	color: #A26769;
+}
+
 /*								HEADER								*/
 header{
 	min-height: 8vh;
@@ -111,7 +116,6 @@ header h1{
 #container p{
 	margin: 0% 2% 1% 2%;
 	align-self: start;
-	font-size: larger;
 	display: flex;
 }
 
@@ -130,7 +134,6 @@ header h1{
 /*								Footer								*/
 footer{
 	position: relative;
-	margin-top: 5%;
 	bottom: 0%;
 	width: 100%;
 }
@@ -139,6 +142,7 @@ footer ul{
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
+	padding: 0%;
 	margin: 0%;
 	justify-content: center;
 }
@@ -215,6 +219,11 @@ footer p{
 	font-style: italic;
 }
 
+fieldset{
+	border: none;
+	width: 50vw;
+}
+
 #comments{
 	resize: none;
 	width: 95%;
@@ -257,11 +266,12 @@ footer p{
 
 .description{
 	text-align: center;
+	width: 35vw;
 	margin: 2% 0% auto 2%;
 	position: relative;
 }
-/*								Media Query								*/
 
+/*								Media Query								*/
 @media (max-width:797px) {
 	#navigation li{
 		text-align: center;
@@ -298,19 +308,49 @@ footer p{
 		top: 0%;
 		left: 0%;
 	}
+
+	.description{
+		text-align: center;
+		width: auto;
+	}
+
+	h1{
+		font-size: 8vw;
+	}
+
+	#contactContent, #contactContent button{
+		font-size: 7vw;
+	}
+
+	input:not(#agree) {
+		width: 75vw;
+		height: 10vw;
+		font-size: 6vw;
+	}
+
+	#comments {
+		font-size: 5vw;
+		height: 50vw;
+	} 
+
+	#agree {
+		width: 6vw;
+		height: 6vw;
+	}
+
+	#contactContent button{
+		width: 25vw;
+		height: 8vw;
+	}
+
+	#thankYouMessage{
+		font-size: 3vw;
+	}
 } 
 
 @media (max-width:1207px) {
 	.activity p{
 		width: 100%;
-	}
-
-	#navigation{
-		font-size: 2vw;
-	}
-
-	h1{
-		font-size: 8vw;
 	}
 
 	.activityImages{
@@ -332,27 +372,8 @@ footer p{
 	}
 	
 	#contact {
-		width: 80vw;
 		font-size: larger;
 	}
 
-	#contactContent {
-		font-size: 8vw;
-	}
-
-	input:not(#agree) {
-		width: 80vw;
-		height: 10vw;
-		
-	}
-
-	#comments {
-		height: 50vw;
-	} 
-
-	#agree {
-		width: 6vw;
-		height: 6vw;
-	}
 
 }

@@ -9,6 +9,8 @@
 // Add document load event listener
 document.addEventListener("DOMContentLoaded", load);
 
+const inputs = ["name", "phone", "email", "comments", "agree"]
+
 /*
  * Handles the load event of the document.
  */
@@ -48,11 +50,12 @@ function hideErrors() {
  *          validation errors
  */
 function validate(e) {
-	hideErrors();
+	setInitialState();
 
 	if (formHasErrors()) {
 		e.preventDefault();
 		return false;
+		
 	}
 	return true;
 }
@@ -75,40 +78,47 @@ function formHasErrors() {
 	const emailRegEx = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i);
 
 
-	if (name === "") {
-		document.getElementById("name_error").style.display = "block";
+	if (agree.checked == false) {
+		document.getElementById("agree_error").style.display = "block";
 		thereIsAnError = true;
+		dealWithTheError(4);
 	}
-
-	if (phone === "") {
-		document.getElementById("phone_error").style.display = "block";
-		thereIsAnError = true;
-	}
-	else if (!phoneRegEx.test(phone)) {
-		document.getElementById("phoneFormat_error").style.display = "block";
-		thereIsAnError = true;
-	}
-	
-	if (email === "") {
-		document.getElementById("email_error").style.display = "block";
-		thereIsAnError = true;
-	}
-	else if (!emailRegEx.test(email)) {
-		document.getElementById("emailformat_error").style.display = "block";
-		thereIsAnError = true;
+	else {
+		document.getElementById("thankYouMessage").style.display = "block";
 	}
 
 	if (comments === "") {
 		document.getElementById("comments_error").style.display = "block";
 		thereIsAnError = true;
+		dealWithTheError(3);
 	}
 
-	if (agree.checked == false) {
-		document.getElementById("agree_error").style.display = "block";
+	if (email === "") {
+		document.getElementById("email_error").style.display = "block";
 		thereIsAnError = true;
+		dealWithTheError(2);
 	}
-	else {
-		document.getElementById("thankYouMessage").style.display = "block";
+	else if (!emailRegEx.test(email)) {
+		document.getElementById("emailformat_error").style.display = "block";
+		thereIsAnError = true;
+		dealWithTheError(2, 1);
+	}
+
+	if (phone === "") {
+		document.getElementById("phone_error").style.display = "block";
+		thereIsAnError = true;
+		dealWithTheError(1);
+	}
+	else if (!phoneRegEx.test(phone)) {
+		document.getElementById("phoneFormat_error").style.display = "block";
+		thereIsAnError = true;
+		dealWithTheError(1, 1);
+	}
+	
+	if (name === "") {
+		document.getElementById("name_error").style.display = "block";
+		thereIsAnError = true;
+		dealWithTheError(0);
 	}
 
 	return thereIsAnError;
@@ -142,4 +152,13 @@ function trim(str)
 {
 	// Uses a regex to remove spaces from a string.
 	return str.replace(/^\s+|\s+$/g,"");
+}
+
+function dealWithTheError(number, type)
+{
+	document.getElementById(inputs[number]).focus();
+
+	if (type == 1) {
+		document.getElementById(inputs[number]).select();
+	}
 }

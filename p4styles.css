@@ -28,22 +28,23 @@ h1{
 }
 
 /*								HEADER								*/
+header{
+	min-height: 8vh;
+}
 
 header ul{
 	display: flex;
 	flex-wrap: wrap;
 	list-style: none;
 	justify-content: center;
-
-	@media (max-width:1316px) {
-		min-height: 30px;
-	}
+	min-height: 30px;
 }
 
-#header img{
-	position: absolute;
+header div img{
+	object-fit: cover;
+	position: relative;
 	width: 100%;
-	min-height: 60px;
+	min-height: 50px;
 }
 
 header a{
@@ -51,15 +52,17 @@ header a{
 	text-decoration: none;
 }
 
-#header{
-	position: absolute;
+header div{
+	position: relative;
+	display: inline-block;
 	width: 100%;
 }
 
 header h1{
 	position: absolute;
-	top: -5px;
+	top: 0%;
 	left: 25px;
+	margin: 1% 0% 0% 0%;
 	letter-spacing: 8px;
 	font-size: 32px;
 	text-decoration: none;
@@ -70,7 +73,7 @@ header h1{
 	background-color: #582C4D;
 	position: relative;
 	left: 0px;;
-	top: 60px;
+	top: -4px;
 	height: 20px;
     width: auto;
 	padding: 1px 0px 2px 0px;
@@ -78,16 +81,12 @@ header h1{
 }
 
 #navigation li a{
-	font-size: 15px;
 	position: relative;
-	top: 1px;
+	top: 2%;
 	color: #F0F0F0;
 	border-right: #A26769 1.5px solid;
 	box-shadow: #F0F0F0 1px 0px 0px;
-
-	@media (max-width:1316px) {
-		font-size: 150%;
-	}
+	font-size: 150%;
 }
 
 #navigation li:last-child a{
@@ -103,35 +102,29 @@ header h1{
 	background-color: #D5B9B2;
     margin: auto;
 	position: relative;
-	top: 80px;
 	display: flex;
 	flex-wrap: wrap;
 	border-radius: 8px;
 	padding: 10px;
-
-	@media (max-width:1316px) {
-		width: 600px;
-		justify-content: center;
-		display: block;
-	}
 }
 
 #container p{
-	max-width: 550px;
-	margin-left: 20px;
+	margin: 0% 2% 1% 2%;
 	align-self: start;
+	font-size: larger;
 	display: flex;
 }
 
 #container img{
 	max-width: 600px;
 	display: flex;
+	object-fit: contain;
 	position: relative;
 	right: 0%;
+}
 
-	@media (max-width:675px) {
-		max-width: 90%;
-	}
+#intro p{
+	max-width: 550px;
 }
 
 /*								Footer								*/
@@ -189,30 +182,23 @@ footer p{
 }
 
 .activity p{
-	width: 100%;
+	width: 50%;
 }
 
 .activityImages{
 	width: 400px;
 	height: 190px;
 	position: relative;
-	top: -30px;
-	@media (max-width:1000px) {
-		top: 0%;
-		height: 120px;
-	}
 }
 
 .activityImages img{
 	position: relative;
+	bottom: 5%;
 	width: 70%;
-	@media (max-width:1000px) {
-		width: 40%;
-	}
 }
 
 .activityImages img:last-child{
-	top: -40px;
+	top: -80px;
 	left: 30%;
 }
 
@@ -229,24 +215,30 @@ footer p{
 	font-style: italic;
 }
 
+#comments{
+	resize: none;
+	width: 95%;
+	height: 120px;
+}
+
 /*								Products								*/
 #container h1{
+	text-align: center;
 	width: 100%;
 	position: relative;
+}
+
+#container h2{
+	margin: 0%;
 }
 
 .products{
 	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
-	max-height: 320px;
 	background-color: #EDE4D4;
 	width: 90%;
 	margin: 1%;
-}
-
-.products p{
-	font-size: larger;
 }
 
 .images{
@@ -254,7 +246,6 @@ footer p{
 	display: flex;
 	flex-wrap: wrap;
 	width: 50%;
-	height: 100%;
 }
 
 .images img{
@@ -265,46 +256,74 @@ footer p{
 }
 
 .description{
-	margin: auto 0% auto 0%;
+	text-align: center;
+	margin: 2% 0% auto 2%;
 	position: relative;
 }
 /*								Media Query								*/
 
-@media (max-width:780px) {
+@media (max-width:797px) {
 	#navigation li{
 		text-align: center;
 		background-color: #582C4D;
 	}
 
-	#navigation li:nth-child(4) a{
-		border: none;
-		box-shadow: none;
+	#navigation{
+		height: 200%;
 	}
 
-	#navigation li:first-child{
-		text-align: left;
-		width: auto;
+	#container img{
+		max-width: 90%;
 	}
 
-	#navigation li:last-child{
-		border-top: #fff 1px solid;
+	.activityImages img{
+		width: 40%;
+	}
+
+	.images{
 		width: 100%;
+	}
+
+	.activityImages{
+		width: 100%;
+		position: relative;
+	}
+	
+	.activityImages img{
+		position: relative;
+		bottom: 0%;
+	}
+	
+	.activityImages img:last-child{
+		top: 0%;
+		left: 0%;
 	}
 } 
 
-@media (max-width:519px) {
-	#navigation li:last-child, #navigation li:nth-child(4){
-		border-top: #fff 1px solid;
+@media (max-width:1207px) {
+	.activity p{
 		width: 100%;
 	}
-	
-	#navigation li:nth-child(3) a{
-		border: none;
-		box-shadow: none;
+
+	.activityImages{
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
-	div#container{
+	.activityImages img{
 		position: relative;
-		top: 100px;
+		bottom: 0%;
+		width: 35%;
+	}
+
+	.activityImages img:last-child {
+		top: 0%;
+		left: 0%;
+	}
+	
+	#contact{
+		width: 80vw;
 	}
 }

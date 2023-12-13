@@ -13,11 +13,7 @@ document.addEventListener("DOMContentLoaded", load);
  * Handles the load event of the document.
  */
 function load() {
-	
-	// Add event listener for the form submit
 	document.getElementById("contactForm").addEventListener("submit", validate);
-
-	// Add event listener for the form reset
 	document.getElementById("contactForm").addEventListener("reset", resetForm);
 
 	setInitialState();
@@ -118,6 +114,7 @@ function formHasErrors() {
 	return thereIsAnError;
 }
 
+
 /*
  * Handles the reset event for the form.
  *
@@ -126,7 +123,14 @@ function formHasErrors() {
  *          the browser from resetting the form.
  */
 function resetForm(e) {
-	
+	if (confirm('Throw everything into the void?')) {
+		hideErrors();
+		document.getElementById("name").focus();
+		return true;
+	}
+	e.preventDefault();
+	setInitialState();
+	return false;
 }
 
 /*

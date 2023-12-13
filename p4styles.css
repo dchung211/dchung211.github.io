@@ -7,11 +7,11 @@
 
 *********************/
 
-#navigation li a:hover{
+#navigation li a:hover, footer ul li a:hover{
 	color: #ff9a9a;
 }
 
-a:focus, #tabs li a:focus{
+a:focus, #tabs li a:focus {
 	color: #ff3838;
 }
 
@@ -98,6 +98,7 @@ header h1{
 /*								Container								*/
 #container {
 	list-style: none;
+	justify-content: center;
 	width: 90%;
 	background-color: #D5B9B2;
     margin: auto;
@@ -131,6 +132,34 @@ header h1{
 	@media (max-width:675px) {
 		max-width: 90%;
 	}
+}
+
+/*								Footer								*/
+footer{
+	position: relative;
+	margin-top: 5%;
+	bottom: 0%;
+	width: 100%;
+}
+
+footer ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0%;
+	justify-content: center;
+}
+
+footer ul li{
+	margin: 1%;
+	font-size: 70%;
+}
+
+footer p{
+	margin: 0% 0% 5% 0%;
+	font-size: 70%;
+	text-align: center;
+	width: 100%;
 }
 
 /*								Recent Activities								*/
@@ -200,6 +229,45 @@ header h1{
 	font-style: italic;
 }
 
+/*								Products								*/
+#container h1{
+	width: 100%;
+	position: relative;
+}
+
+.products{
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 320px;
+	background-color: #EDE4D4;
+	width: 90%;
+	margin: 1%;
+}
+
+.products p{
+	font-size: larger;
+}
+
+.images{
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	height: 100%;
+}
+
+.images img{
+	top: 1%;
+	max-height: 150px;
+	margin: 1%;
+	border-radius: 10%;
+}
+
+.description{
+	margin: auto 0% auto 0%;
+	position: relative;
+}
 /*								Media Query								*/
 
 @media (max-width:780px) {

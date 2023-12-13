@@ -305,6 +305,14 @@ footer p{
 		width: 100%;
 	}
 
+	#navigation{
+		font-size: 2vw;
+	}
+
+	h1{
+		font-size: 8vw;
+	}
+
 	.activityImages{
 		width: 100%;
 		display: flex;
@@ -323,12 +331,28 @@ footer p{
 		left: 0%;
 	}
 	
-	#contact{
+	#contact {
 		width: 80vw;
 		font-size: larger;
 	}
 
-	#contactContent{
-		font-size: 4vw;
+	#contactContent {
+		font-size: 8vw;
 	}
+
+	input:not(#agree) {
+		width: 80vw;
+		height: 10vw;
+		
+	}
+
+	#comments {
+		height: 50vw;
+	} 
+
+	#agree {
+		width: 6vw;
+		height: 6vw;
+	}
+
 }

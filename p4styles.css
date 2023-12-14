@@ -336,7 +336,7 @@ fieldset{
 		width: auto;
 	}
 
-	h1{
+	#container h1{
 		font-size: 8vw;
 	}
 
@@ -370,7 +370,7 @@ fieldset{
 	}
 } 
 
-@media (max-device-width:400px) {
+@media (max-device-width:425px) {
 	#contactContent ul{
 		padding-left: 0%;
 		list-style: none;
@@ -378,5 +378,10 @@ fieldset{
 
 	button{
 		padding: 0%;
+	}
+	
+	header div h1{
+		left: 5%;
+		font-size: 7vw;
 	}
 }

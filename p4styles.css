@@ -271,7 +271,11 @@ fieldset{
 
 /*								Media Query								*/
 
-@media (max-device-width:1207px) {
+@media (max-width:1207px) {
+	#container img :not(#content){
+		width: 80vw;
+	}
+
 	.activity p{
 		width: 100%;
 	}
@@ -292,7 +296,6 @@ fieldset{
 		position: relative;
 		left: 25px;
 		width: 40%;
-		bottom: 0%;
 	}
 	
 	.activityImages img:last-child{
